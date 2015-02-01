@@ -283,10 +283,6 @@ $colorHighlightInfo: #5CB260;
 			@include box-shadow(none);
 		}
 
-		.sign-out {
-			display: none;
-		}
-		
 		.dockbar-user-notifications {
 			.user-notification-link {
 				padding: 8px;
