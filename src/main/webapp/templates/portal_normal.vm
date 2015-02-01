@@ -58,7 +58,18 @@ $theme.include($body_top_include)
 
 <div class="container-fluid" id="wrapper">
 	<div id="subbanner">
-		<span>$site_subheading</span>
+		#set($wedding_day = $dateUtil.parseDate("19/04/2015", $staticFieldGetter.getFieldValue("com.liferay.portal.kernel.util.LocaleUtil", "BRAZIL")))
+		#set($current_time = $dateUtil.newDate())
+		#set($days_between = $dateUtil.getDaysBetween($current_time, $wedding_day))
+		#if ($days_between > 1)
+		<span>$site_subheading - Faltam $days_between dias!</span>
+		#else 
+			#if ($days_between == 1)
+			<span>$site_subheading - É amanhã!</span>
+			#else 
+			<span>$site_subheading</span>
+			#end
+		#end
 	</div>
 
 	<div id="content">
