@@ -122,7 +122,6 @@ $colorHighlightInfo: #5CB260;
 				border: 1px solid #888;
 				border-width: 0 0 0 1px;
 				margin: 0;
-				padding: 0 6px;
 
 				&:first-child {
 					border-width: 0 !important;
